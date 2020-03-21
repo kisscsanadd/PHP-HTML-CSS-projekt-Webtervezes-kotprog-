@@ -5,7 +5,7 @@
     <title>Regisztráció</title>
 	<link rel="stylesheet" type="text/css" href="mainStyle.css" />
 	<link rel="stylesheet" type="text/css" href="login-reg-style.css" />
-	<link href="favicon2.ico" rel="icon" type="image/x-icon" />
+	<link href="favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
     <header>
@@ -27,20 +27,23 @@
     </div>
 
     <div class="container">
-        <label for="uname"><b>Felhasználónév</b></label>
+        <label for="uname"><b>Felhasználónév</b>*</label>
         <input type="text" placeholder="Add meg a felhasználóneved" name="uname" required>
 		
-        <label for="email"><b>Email-cím</b></label>
+        <label for="email"><b>Email-cím</b>*</label>
         <input type="email" placeholder="Add meg az email címedet" name="email" required>
 		
-        <label for="email"><b>Email-cím megerősítés</b></label>
+        <label for="email"><b>Email-cím megerősítés</b>*</label>
         <input type="email" placeholder="Add meg még egyszer az email címedet" name="email" required>
 
-        <label for="pw"><b>Jelszó</b></label>
+        <label for="pw"><b>Jelszó</b>*</label>
         <input type="password" placeholder="Add meg a jelszavad" name="pw" required>
 		
-        <label for="pwa"><b>Jelszó megerősítés</b></label>
+        <label for="pwa"><b>Jelszó megerősítés</b>*</label>
         <input type="password" placeholder="Add meg még egyszer a jelszavad" name="pwa" required>
+		
+        <label for="phone"><b>Telefonszám</b></label>
+        <input type="tel" placeholder="Add meg a telefonszámod" name="phone">
 
         <button type="submit">Regisztrálás</button>
     </div>
