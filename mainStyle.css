@@ -10,32 +10,6 @@ header {
 	background-position: center;
 	background-repeat: repeat;
 }
-nav {
-	height: 80px;
-	background-color: #05c2fa;
-}
-aside {
-	width: 20%;
-	height: 500px;
-	background-color: #5e8abf;
-	float: left;
-}
-main {
-	height: 500px;
-	background-color: #4a4a4a;
-}
-section {
-	height: 20%;
-	background-color: #b3d6ff;
-}
-article {
-	height: 60%;
-	background-color: #535a80;
-}
-footer {
-	height: 100px;
-	background-color: #88d7e3;
-}
 
 ul {
   list-style-type: none;
@@ -59,9 +33,5 @@ li a {
 
 li a:hover:not(.active) {
   background-color: #111;
-}
-
-.active {
-  background-color: #4CAF50;
 }
 		
