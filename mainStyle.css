@@ -1,0 +1,67 @@
+body {
+	margin: auto;
+    background-color: #c9f5fa;
+}
+header {
+	height: 200px;
+	background-color: #333;
+	background-image: url('header.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: repeat;
+}
+nav {
+	height: 80px;
+	background-color: #05c2fa;
+}
+aside {
+	width: 20%;
+	height: 500px;
+	background-color: #5e8abf;
+	float: left;
+}
+main {
+	height: 500px;
+	background-color: #4a4a4a;
+}
+section {
+	height: 20%;
+	background-color: #b3d6ff;
+}
+article {
+	height: 60%;
+	background-color: #535a80;
+}
+footer {
+	height: 100px;
+	background-color: #88d7e3;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+		

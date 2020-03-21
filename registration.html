@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Regisztráció</title>
+	<link rel="stylesheet" type="text/css" href="mainStyle.css" />
+	<link rel="stylesheet" type="text/css" href="login-reg-style.css" />
+</head>
+<body>
+    <header>
+	</header>
+    <nav>
+        <ul>
+            <li><a>Regisztráció</a></li>
+            <li><a href="login.html">Bejelentkezés</a></li>
+            <li><a href="">Fehérjék</a></li>
+            <li><a href="">Multivitaminok</a></li>
+        </ul>
+    </nav>
+<h2>Regisztráció</h2>
+
+<form action="/action_page.php" method="post">
+    <div class="imgcontainer">
+        <img src="avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Felhasználónév</b></label>
+        <input type="text" placeholder="Add meg a felhasználóneved" name="uname" required>
+		
+        <label for="email"><b>Email-cím</b></label>
+        <input type="email" placeholder="Add meg az email címedet" name="email" required>
+		
+        <label for="email"><b>Email-cím megerősítés</b></label>
+        <input type="email" placeholder="Add meg még egyszer az email címedet" name="email" required>
+
+        <label for="pw"><b>Jelszó</b></label>
+        <input type="password" placeholder="Add meg a jelszavad" name="pw" required>
+		
+        <label for="pwa"><b>Jelszó megerősítés</b></label>
+        <input type="password" placeholder="Add meg még egyszer a jelszavad" name="pwa" required>
+
+        <button type="submit">Regisztrálás</button>
+    </div>
+
+    <div class="container" style="background-color:#b0dffa">
+        <button onclick="location.href = 'main.html';" type="button" class="cancelbtn">Vissza</button>
+    </div>
+</form>
+
+</body>
+</html>
