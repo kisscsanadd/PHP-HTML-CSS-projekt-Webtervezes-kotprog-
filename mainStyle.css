@@ -55,3 +55,9 @@ li a:hover:not(.active) {
 #products li:hover ul {
 	display: block;
 }
+
+@media screen and (max-width: 550px) {
+	header {
+		background-repeat: no-repeat;
+	}
+}

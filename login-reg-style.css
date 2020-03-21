@@ -49,7 +49,7 @@ button:hover {
 	background-color: #9fc3fa;
 }
 
-#fpw {
+#forgetpw {
 	float: right;
 	padding-top: 16px;
 }
@@ -60,12 +60,8 @@ button:hover {
 }
 
 
-@media screen and (max-width: 300px) {
-	span.psw {
-		display: block;
-		float: none;
-	}
-	.cancelbtn {
+@media screen and (max-width: 550px) {
+	#cancelbtn {
 		width: 100%;
 	}
 }
