@@ -54,9 +54,11 @@ button:hover {
 	padding-top: 16px;
 }
 
-.req {
-	color: #f44336;
+.required::after {
+        content: '*';
+        color: #f44336;
 }
+
 
 @media screen and (max-width: 300px) {
 	span.psw {

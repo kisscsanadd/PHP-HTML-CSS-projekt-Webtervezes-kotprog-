@@ -38,4 +38,20 @@ li a:hover:not(.active) {
 #current {
   background-color: #111;
 }
-		
+
+#indirect-current {
+  background-color: #111;
+}
+
+#products li ul {
+	display:none;
+	position:absolute;
+}
+
+#products li li {
+	float:none;
+}
+
+#products li:hover ul {
+	display: block;
+}

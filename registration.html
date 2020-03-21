@@ -15,8 +15,15 @@
             <li><a href="main.html">Főoldal</a></li>
             <li id="current"><a>Regisztráció</a></li>
             <li><a href="login.html">Bejelentkezés</a></li>
-            <li><a href="protein.html">Fehérjék</a></li>
-            <li><a href="vitamin.html">Vitaminok</a></li>
+			
+			<ul id="products">
+				<li><a href="">Termékek</a>
+					<ul>
+						<li><a href="protein.html">Fehérjék</a></li>
+						<li><a href="vitamin.html">Vitaminok</a></li>
+					</ul>
+				</li>
+			</ul>
         </ul>
     </nav>
 <h2>Regisztráció</h2>
@@ -27,25 +34,25 @@
     </div>
 
     <div class="container">
-        <label for="uname"><b>Felhasználónév</b></label><label class="req">*</label>
+        <label class="required" for="uname"><b>Felhasználónév</b></label>
         <input type="text" placeholder="Add meg a felhasználóneved" name="uname" required>
 		
-        <label for="email"><b>Email-cím</b></label><label class="req">*</label>
+        <label class="required" for="email"><b>Email-cím</b></label>
         <input type="email" placeholder="Add meg az email címedet" name="email" required>
 		
-        <label for="emaila"><b>Email-cím megerősítés</b></label><label class="req">*</label>
+        <label class="required" for="emaila"><b>Email-cím megerősítés</b></label>
         <input type="email" placeholder="Add meg még egyszer az email címedet" name="emaila" required>
 
-        <label for="pw"><b>Jelszó</b></label><label class="req">*</label>
+        <label class="required" for="pw"><b>Jelszó</b></label>
         <input type="password" placeholder="Add meg a jelszavad" name="pw" required>
 		
-        <label for="pwa"><b>Jelszó megerősítés</b></label><label class="req">*</label>
+        <label class="required" for="pwa"><b>Jelszó megerősítés</b></label>
         <input type="password" placeholder="Add meg még egyszer a jelszavad" name="pwa" required>
 		
         <label for="phone"><b>Telefonszám</b></label>
         <input type="tel" placeholder="Add meg a telefonszámod" name="phone">
 
-        <button type="submit">Regisztrálás</button>
+        <button type="submit">Regisztráció</button>
     </div>
 
     <div class="container" style="background-color:#b0dffa">
