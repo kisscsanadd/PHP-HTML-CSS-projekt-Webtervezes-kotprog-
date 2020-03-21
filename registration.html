@@ -22,8 +22,8 @@
 <h2>Regisztráció</h2>
 
 <form action="/action_page.php" method="post">
-    <div class="imgcontainer">
-        <img src="avatar.png" alt="Avatar" class="avatar">
+    <div id="imgcontainer">
+        <img src="avatar.png" alt="Avatar" id="avatar">
     </div>
 
     <div class="container">
@@ -33,8 +33,8 @@
         <label for="email"><b>Email-cím</b></label><label class="req">*</label>
         <input type="email" placeholder="Add meg az email címedet" name="email" required>
 		
-        <label for="email"><b>Email-cím megerősítés</b></label><label class="req">*</label>
-        <input type="email" placeholder="Add meg még egyszer az email címedet" name="email" required>
+        <label for="emaila"><b>Email-cím megerősítés</b></label><label class="req">*</label>
+        <input type="email" placeholder="Add meg még egyszer az email címedet" name="emaila" required>
 
         <label for="pw"><b>Jelszó</b></label><label class="req">*</label>
         <input type="password" placeholder="Add meg a jelszavad" name="pw" required>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="container" style="background-color:#b0dffa">
-        <button onclick="location.href = 'main.html';" type="button" class="cancelbtn">Vissza</button>
+        <button onclick="location.href = 'main.html';" type="button" id="cancelbtn">Vissza</button>
     </div>
 </form>
 
