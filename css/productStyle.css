@@ -35,27 +35,6 @@ th {
 	}
 }
 
-@media screen and (max-width: 900px) {
-	table {
-		border-spacing: 40px 0;
-	}
-	th {
-		width: 0;
-	}
-	
-	.mqp {
-		width: 60%;
-	}
-	
-	.row-border td {
-		padding-bottom: 50px;
-	}
-	
-	label {
-		font-size: 14px;
-	}
-}
-
 @media screen and (max-width: 550px) {
 	table {
 		border-spacing: 5px 0;
