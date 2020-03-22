@@ -13,3 +13,66 @@ th {
 .row-border td {
 	padding-bottom: 70px;
 }
+
+@media screen and (max-width: 1060px) {
+	table {
+		border-spacing: 60px 0;
+	}
+	th {
+		width: 0;
+	}
+	
+	.mqp {
+		width: 80%;
+	}
+	
+	.row-border td {
+		padding-bottom: 60px;
+	}
+	
+	label {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	table {
+		border-spacing: 40px 0;
+	}
+	th {
+		width: 0;
+	}
+	
+	.mqp {
+		width: 60%;
+	}
+	
+	.row-border td {
+		padding-bottom: 50px;
+	}
+	
+	label {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	table {
+		border-spacing: 5px 0;
+	}
+	th {
+		width: 0;
+	}
+	
+	.mqp {
+		width: 40%;
+	}
+	
+	.row-border td {
+		padding-bottom: 35px;
+	}
+	
+	label {
+		font-size: 14px;
+	}
+}
