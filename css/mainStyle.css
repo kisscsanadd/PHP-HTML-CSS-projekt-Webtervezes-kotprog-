@@ -1,7 +1,17 @@
 body {
 	margin: auto;
-    background-color: #c9f5fa;
+    background-color: #cae3db;
 }
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+
+body::-webkit-scrollbar-thumb {
+	background: purple;  /* TODO, change the color */
+}
+
 header {
 	height: 200px;
 	background-color: #333;
