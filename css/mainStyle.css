@@ -43,6 +43,11 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
+.nav>ul>ul {
+    transition: all 1s ease-in-out;
+	transition-delay: 50ms;
+}
+
 #indirect-current {
   background-color: #111;
 }
@@ -64,4 +69,23 @@ li a:hover:not(.active) {
 	header {
 		background-repeat: no-repeat;
 	}
+}
+
+.nav li li {
+	float: none;
+}
+
+.nav li ul {
+    position:absolute;
+    left:50;
+    top:246px;
+    z-index:1;
+    max-height:0;
+    -webkit-transform:perspective(350) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin:50% 0;
+    transition:350ms;
+}
+.nav ul > li:hover ul {
+    max-height:100px;
+    -webkit-transform:perspective(350) rotate3d(0,0,0,0);
 }
