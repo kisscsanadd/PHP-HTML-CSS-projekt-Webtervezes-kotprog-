@@ -1,6 +1,6 @@
 body {
 	margin: auto;
-    background-color: #c9f5fa;
+    background-color: #cae3db;
 }
 
 body::-webkit-scrollbar {
@@ -60,6 +60,44 @@ li a:hover:not(.active) {
 #products li ul {
 	display:none;
 	position:absolute;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+	padding-bottom: 100px;
+}
+.multi {
+	height:200px;
+	width:170px;
+}
+
+.image{
+	margin-right: 20px;
+	margin-left: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.add_cart{
+	position: absolute;
+	width: 100%;
+	background-color: darkgrey;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	cursor: pointer;
+	text-align: center;
+}
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4{
+	bottom: 100px;
+	opacity: 1;
+	padding: 10px;
+	text-decoration: none;
 }
 
 #products li li {
