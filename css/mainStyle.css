@@ -101,7 +101,7 @@ li a:hover:not(.active) {
     max-height:100px;
     -webkit-transform:perspective(350) rotate3d(0,0,0,0);
 }
-.barbell{
-    height: 200px;
+#barbell{
+    height: 180px;
     width: 400px;
 }
