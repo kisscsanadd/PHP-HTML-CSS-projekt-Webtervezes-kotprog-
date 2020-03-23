@@ -35,12 +35,16 @@ th {
 
 .add_cart{
 	position: absolute;
-	width: 100%;
+	width: 150px;
 	background-color: darkgrey;
 	transition: all 0.3s ease-in-out;
 	opacity: 0;
 	cursor: pointer;
 	text-align: center;
+}
+
+.cart {
+	color: white;
 }
 
 .image:hover .cart{
