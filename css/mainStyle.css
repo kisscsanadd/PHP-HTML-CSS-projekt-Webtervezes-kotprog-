@@ -55,26 +55,9 @@ li a:hover:not(.active) {
   background-color: #65aaaa;
 }
 
-.nav>ul>ul {
+.nav>ul>ul {				/* TODO - remove it a little bit later */
     transition: all 1s ease-in-out;
 	transition-delay: 50ms;
-}
-
-#indirect-current {
-  background-color: #111;
-}
-
-#products li ul {
-	display:none;
-	position:absolute;
-}
-
-#products li li {
-	float:none;
-}
-
-#products li:hover ul {
-	display: block;
 }
 
 @media screen and (max-width: 550px) {
@@ -89,7 +72,7 @@ li a:hover:not(.active) {
 
 .nav li ul {
     position:absolute;
-    left:50;
+    left:314px;
     top:246px;
     z-index:1;
     max-height:0;

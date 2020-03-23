@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Bejelentkezés</title>
@@ -12,19 +12,17 @@
 	</header>
     <nav class="nav">
         <ul>
-			<ul>
-				<li><a href="main.html">Főoldal</a></li>
-				<li><a href="registration.html">Regisztráció</a></li>
-				<li class="current"><a href="#">Bejelentkezés</a></li>
-				<li class="about"><a href="about.html">Rólunk</a></li>
-				<li class="productsWidth">
-					<a href="#">Termékek</a>
-					<ul class="productsWidth">
-						<li><a href="protein.html">Fehérjék</a></li>
-						<li><a href="vitamin.html">Vitaminok</a></li>
-					</ul>
-				</li>
-			</ul>
+			<li><a href="main.html">Főoldal</a></li>
+			<li><a href="registration.html">Regisztráció</a></li>
+			<li class="current"><a href="#">Bejelentkezés</a></li>
+			<li class="about"><a href="about.html">Rólunk</a></li>
+			<li class="productsWidth">
+				<a href="#">Termékek</a>
+				<ul class="productsWidth">
+					<li><a href="protein.html">Fehérjék</a></li>
+					<li><a href="vitamin.html">Vitaminok</a></li>
+				</ul>
+			</li>
 		</ul>
     </nav>
 
@@ -36,11 +34,11 @@
     </div>
 
     <div class="logRegFooterContainer">
-        <label for="uname"><b>Felhasználónév</b></label>
-        <input type="text" placeholder="Add meg a felhasználóneved" name="uname" required>
+        <label for="username"><b>Felhasználónév</b></label>
+        <input type="text" placeholder="Add meg a felhasználóneved" id="username" required>
 
         <label for="pw"><b>Jelszó</b></label>
-        <input type="password" placeholder="Add meg a jelszavad" name="pw" required>
+        <input type="password" placeholder="Add meg a jelszavad" id="pw" required>
 
         <button type="submit">Bejelentkezés</button>
         <label>
