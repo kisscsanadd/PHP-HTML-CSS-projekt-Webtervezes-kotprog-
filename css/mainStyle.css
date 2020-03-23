@@ -50,8 +50,9 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
+
 .current {
-  background-color: #111;
+  background-color: #65aaaa;
 }
 
 .nav>ul>ul {
@@ -99,4 +100,8 @@ li a:hover:not(.active) {
 .nav ul > li:hover ul {
     max-height:100px;
     -webkit-transform:perspective(350) rotate3d(0,0,0,0);
+}
+.barbell{
+    height: 200px;
+    width: 400px;
 }
