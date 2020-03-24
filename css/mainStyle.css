@@ -140,11 +140,11 @@ li a:hover:not(.active) {
 
 @media print {
 	header {
-		height: 0px;
+		display: none;
 	}
 	
 	footer, #running {
-		height: 0;
+		display: none;
 	}
 	
 	#forgetpw {
@@ -158,5 +158,9 @@ li a:hover:not(.active) {
 	.multi {
 		height: 100px;
 		width: 100px;
+	}
+	
+	.nav {
+		/* display: none; */
 	}
 }
