@@ -9,6 +9,11 @@ th, td {
   padding: 15px;
   text-align: left;
 }
+
+.tableMargin {
+	margin-bottom: 50px;
+}
+
 #aboutUs tr:nth-child(even) {
   background-color: #eee;
 }
@@ -20,7 +25,9 @@ th, td {
   color: white;
 }
 
-#avatar {
-	width: 20%;
-	border-radius: 50%;
+.citationImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }

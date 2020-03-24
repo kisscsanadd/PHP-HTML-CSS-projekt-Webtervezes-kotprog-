@@ -95,15 +95,9 @@ li a:hover:not(.active) {
   background-color: #65aaaa;
 }
 
-.nav>ul>ul {				/* TODO - remove it a little bit later */
+.nav>ul>ul {				/* TODO - remove it a little bit later 2020-03-24 */
     transition: all 1s ease-in-out;
 	transition-delay: 50ms;
-}
-
-@media screen and (max-width: 550px) {
-	header {
-		background-repeat: no-repeat;
-	}
 }
 
 .nav li li {
@@ -124,13 +118,15 @@ li a:hover:not(.active) {
     max-height:100px;
     -webkit-transform:perspective(350) rotate3d(0,0,0,0);
 }
-#barbell{
-    height: 180px;
-    width: 400px;
-}
 
 .productsWidth {
 	width: 95px;
+}
+
+@media screen and (max-width: 550px) {
+	header {
+		background-repeat: no-repeat;
+	}
 }
 
 @media print {
