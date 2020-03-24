@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
 
 
 body::-webkit-scrollbar-thumb {
-	background: purple;  /* TODO, change the color */
+	background: #3c7e80;
 }
 
 header {
@@ -91,4 +91,14 @@ li a:hover:not(.active) {
 
 .productsWidth {
 	width: 95px;
+}
+
+.vitaminsContainer{
+    background-color: white;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.vitaminsContainer > h2, h3{
+      background-color: #cae3db;
 }
