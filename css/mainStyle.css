@@ -62,8 +62,6 @@ footer {
 	-webkit-animation: scroll 25s infinite linear;
 }
 
-
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -133,4 +131,14 @@ li a:hover:not(.active) {
 
 .productsWidth {
 	width: 95px;
+}
+
+@media print {
+	header {
+		height: 0px;
+	}
+	
+	img {
+		display: none;
+	}
 }
