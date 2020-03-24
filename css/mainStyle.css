@@ -108,7 +108,6 @@ li a:hover:not(.active) {
     position:absolute;
     left:314px;
     top:246px;
-    z-index:1;
     max-height:0;
     -webkit-transform:perspective(350) rotate3d(1,0,0,-90deg);
     -webkit-transform-origin:50% 0;
