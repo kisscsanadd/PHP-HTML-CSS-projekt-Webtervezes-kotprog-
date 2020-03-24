@@ -93,12 +93,4 @@ li a:hover:not(.active) {
 	width: 95px;
 }
 
-.vitaminsContainer{
-    background-color: white;
-    margin-right: 150px;
-    margin-left: 150px;
-}
 
-.vitaminsContainer > h2, h3{
-      background-color: #cae3db;
-}

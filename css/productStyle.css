@@ -31,6 +31,8 @@ th {
 	margin-left: 20px;
 	position: relative;
 	overflow: hidden;
+	line-height: 25px;
+	text-align: center;
 }
 
 .add_cart{
@@ -53,3 +55,14 @@ th {
 	padding: 10px;
 	text-decoration: none;
 }
+.vitaminsContainer{
+	background-color: white;
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+label{
+	background-color: #cae3db;
+	font-weight: bolder;
+}
+
