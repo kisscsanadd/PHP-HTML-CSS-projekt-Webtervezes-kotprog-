@@ -128,12 +128,35 @@ li a:hover:not(.active) {
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.nav {
+		font-size: 11px;
+	}
+	.nav li ul {
+		left:246px;
+		top:240px;
+	}
+}
+
 @media print {
 	header {
 		height: 0px;
 	}
 	
-	img {
-		display: none;
+	footer, #running {
+		height: 0;
+	}
+	
+	#forgetpw {
+		text-decoration: none;
+	}
+	
+	.tableMargin {
+		margin-bottom: 20px;
+	}
+	
+	.multi {
+		height: 100px;
+		width: 100px;
 	}
 }
