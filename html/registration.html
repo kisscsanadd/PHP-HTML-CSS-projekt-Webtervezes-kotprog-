@@ -26,39 +26,44 @@
 		</ul>
     </nav>
 	
-<h2>Regisztráció</h2>
+	<h2>Regisztráció</h2>
 
-<form action="/action_page.php" method="post">
-    <div id="imgcontainer">
-        <img src="../pictures/avatar.png" alt="Avatar" id="avatar">
-    </div>
+	<form action="/action_page.php" method="post">
+		<div id="imgcontainer">
+			<img src="../pictures/avatar.png" alt="Avatar" id="avatar">
+		</div>
 
-    <div class="logRegFooterContainer">
-        <label class="required" for="userame"><b>Felhasználónév</b></label>
-        <input type="text" placeholder="Add meg a felhasználóneved" id="userame" required>
-		
-        <label class="required" for="email"><b>Email-cím</b></label>
-        <input type="email" placeholder="Add meg az email címedet" id="email" required>
-		
-        <label class="required" for="emaila"><b>Email-cím megerősítés</b></label>
-        <input type="email" placeholder="Add meg még egyszer az email címedet" id="emaila" required>
+		<div class="logRegFooterContainer">
+			<label class="required" for="userame"><b>Felhasználónév</b></label>
+			<input type="text" placeholder="Add meg a felhasználóneved" id="userame" required>
+			
+			<label class="required" for="email"><b>Email-cím</b></label>
+			<input type="email" placeholder="Add meg az email címedet" id="email" required>
+			
+			<label class="required" for="emaila"><b>Email-cím megerősítés</b></label>
+			<input type="email" placeholder="Add meg még egyszer az email címedet" id="emaila" required>
 
-        <label class="required" for="pw"><b>Jelszó</b></label>
-        <input type="password" placeholder="Add meg a jelszavad" id="pw" required>
-		
-        <label class="required" for="pwa"><b>Jelszó megerősítés</b></label>
-        <input type="password" placeholder="Add meg még egyszer a jelszavad" id="pwa" required>
-		
-        <label for="phone"><b>Telefonszám</b></label>
-        <input type="tel" placeholder="Add meg a telefonszámod" id="phone">
+			<label class="required" for="pw"><b>Jelszó</b></label>
+			<input type="password" placeholder="Add meg a jelszavad" id="pw" required>
+			
+			<label class="required" for="pwa"><b>Jelszó megerősítés</b></label>
+			<input type="password" placeholder="Add meg még egyszer a jelszavad" id="pwa" required>
+			
+			<label for="phone"><b>Telefonszám</b></label>
+			<input type="tel" placeholder="Add meg a telefonszámod" id="phone">
 
-        <button type="submit">Regisztráció</button>
-    </div>
+			<button type="submit">Regisztráció</button>
+		</div>
 
-    <div class="logRegFooterContainer" style="background-color:#b0dffa">
-        <button onclick="location.href = 'main.html';" type="button" id="cancelbtn">Vissza</button>
-    </div>
-</form>
+		<div class="logRegFooterContainer" style="background-color:#b0dffa">
+			<button onclick="location.href = 'main.html';" type="button" id="cancelbtn">Vissza</button>
+		</div>
+	</form>
 
+	<footer>
+		<label id="running"><span>Ez egy táplálékkiegészítőket áruló webshop. 
+		Készítette: Kiss Csanád & Szirbik Péter</span>
+		</label>
+	</footer>
 </body>
 </html>
