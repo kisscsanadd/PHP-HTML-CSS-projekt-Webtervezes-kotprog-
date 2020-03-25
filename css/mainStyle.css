@@ -137,30 +137,3 @@ li a:hover:not(.active) {
 		top:240px;
 	}
 }
-
-@media print {
-	header {
-		display: none;
-	}
-	
-	footer, #running {
-		display: none;
-	}
-	
-	#forgetpw {
-		text-decoration: none;
-	}
-	
-	.tableMargin {
-		margin-bottom: 20px;
-	}
-	
-	.multi {
-		height: 100px;
-		width: 100px;
-	}
-	
-	.nav {
-		/* display: none; */
-	}
-}
