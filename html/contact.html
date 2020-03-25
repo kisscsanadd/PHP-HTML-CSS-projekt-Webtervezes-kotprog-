@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Főoldal</title>
+    <title>Kapcsolat</title>
 	<link rel="stylesheet" type="text/css" href="../css/mainStyle.css" />
 	<link rel="stylesheet" type="text/css" href="../css/contactStyle.css" />
 	<link rel="stylesheet" type="text/css" href="../css/printStyle.css" />
@@ -33,6 +33,23 @@
 		<h2>Kapcsolat</h2>
 		<label> Add meg a neved, az e-mail címed és írj nekünk üzenetet!
 		</label>
+		<form action="/action_page.php" method="post">
+
+			<div class="logRegFooterContainer">
+				<label class="required" for="username"><b>Név</b></label>
+				<input type="text" placeholder="Add meg a felhasználóneved" id="username" required>
+
+				<label class="required" for="email"><b>Email-cím</b></label>
+				<input type="email" placeholder="Add meg az email címedet" id="email" required>
+
+				<label class="required" for="message"><b>Üzenet</b></label>
+					<textarea id="message" name="message" placeholder="..."></textarea>
+
+
+
+				<button type="submit">Küldés</button>
+			</div>
+		</form>
 	</div>
 
 	<footer>
