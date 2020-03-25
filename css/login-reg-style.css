@@ -44,6 +44,11 @@ button:hover {
 	border-radius: 50%;
 }
 
+#logo {
+	margin-left: -45px;
+	margin-bottom: 40px;
+}
+
 .logRegFooterContainer {
 	padding: 16px;
 	background-color: #9fc3fa;
