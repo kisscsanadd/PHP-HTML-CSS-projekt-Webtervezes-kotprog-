@@ -100,11 +100,6 @@ li a:hover:not(.active) {
   background-color: #65aaaa;
 }
 
-.nav>ul>ul {				/* TODO - remove it a little bit later 2020-03-24 */
-    transition: all 1s ease-in-out;
-	transition-delay: 50ms;
-}
-
 .nav li li {
 	float: none;
 }
