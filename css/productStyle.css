@@ -2,10 +2,6 @@ table, tr, td, th {
 	text-align: center;
 }
 
-table {
-  border-spacing: 100px 0;
-}
-
 th {
 	width: 250px;
 }
@@ -21,6 +17,7 @@ th {
 	margin-top: 50px;
 	padding-bottom: 100px;
 }
+
 .multi {
 	height:200px;
 	width:200px;
@@ -94,5 +91,22 @@ label{
 		margin-bottom: -2px;
 		padding-left: 5px;
 		text-align: left;
+	}
+	
+	.image:hover .multi {
+		visibility: visible;
+	}
+
+	.image:hover .productDescription {
+		visibility: hidden;
+	}
+	
+	.image {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.multi {
+		margin-left: -30px;
 	}
 }
