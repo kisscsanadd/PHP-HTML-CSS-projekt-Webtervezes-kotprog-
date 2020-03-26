@@ -32,20 +32,25 @@
 	
 	<main>
 		<h2>BMI kalkulátor</h2>
-		
-		<form action="bmi.html" method="post">
-				<div>
-					<label for="height"><b>Magasság (cm)</b></label>
-				</div>
-				<input type="number" value="150" max="299" id="height" required>
-				
-				<div class="gap">
-					<label for="weight"><b>Testsúly (kg)</b></label>
-					</div>
-				<input type="number" value="50" min="9" id="weight" required> <br>
-				<button type="submit" class="buttond">Kalkulálás</button>
-		</form>
-				
+		<div class="flexbox">
+			<div id="left">
+				<form action="bmi.html" method="post">
+						<div>
+							<label for="height"><b>Magasság (cm)</b></label>
+						</div>
+						<input type="number" value="150" max="299" id="height" required>
+						
+						<div class="gap">
+							<label for="weight"><b>Testsúly (kg)</b></label>
+							</div>
+						<input type="number" value="50" min="9" id="weight" required> <br>
+						<button type="submit" class="buttond">Kalkulálás</button>
+				</form>
+			</div>
+			<div id="right">
+				<label>Ide fog menni az értékelés<br>Hogy mennyi a BMI index</label>
+			</div>
+		 </div>
 	</main>
 
 	<footer>

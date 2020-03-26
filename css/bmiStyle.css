@@ -10,6 +10,11 @@ input[type=number] {
 	margin-top: 11px;
 }
 
-form {
-	width: 20%;
+.flexbox {
+    display: flex;
+}
+
+
+#left {
+    flex-grow: 0.5;
 }
