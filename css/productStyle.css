@@ -6,10 +6,6 @@ th {
 	width: 250px;
 }
 
-.row-border td {
-	padding-bottom: 70px;
-}
-
 .vitaminsContainer {
 	display: flex;
 	justify-content: center;
@@ -30,27 +26,6 @@ th {
 	overflow: hidden;
 	line-height: 25px;
 	text-align: center;
-}
-
-.add_cart{
-	position: absolute;
-	width: 150px;
-	background-color: darkgrey;
-	transition: all 0.3s ease-in-out;
-	opacity: 0;
-	cursor: pointer;
-	text-align: center;
-}
-
-.cart {
-	color: white;
-}
-
-.image:hover .cart{
-	bottom: 100px;
-	opacity: 1;
-	padding: 10px;
-	text-decoration: none;
 }
 
 .image:hover .multi {
