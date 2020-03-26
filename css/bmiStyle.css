@@ -14,7 +14,22 @@ input[type=number] {
     display: flex;
 }
 
-
 #left {
     flex-grow: 0.5;
+}
+
+.value {
+	text-align: right;
+}
+
+.valuation {
+	text-align: left;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th {
+	padding-left: 25px;
 }
