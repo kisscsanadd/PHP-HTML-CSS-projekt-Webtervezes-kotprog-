@@ -50,33 +50,54 @@
 			<div id="right">
 				<table>
 					<thead>
-						<th class="valuation"><b>Értékelés</b></th>
-						<th class="value"><b>BMI érték</b></th>
+						<th class="valuation" id="valuationId"><b>Értékelés</b></th>
+						<th class="value" id="valueId"><b>BMI érték</b></th>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="valuation">Sovány</td>
-							<td class="value">< 18,5</td>
+							<td headers="valuationId" class="valuation">Sovány</td>
+							<td headers="valueId" class="value">< 18,5</td>
 						</tr>
 						<tr>
-							<td class="valuation">Normális testsúly</td>
-							<td class="value">18,5 - 24,9</td>
+							<td headers="valuationId" class="valuation">Normális testsúly</td>
+							<td headers="valueId" class="value">18,5 - 24,9</td>
 						</tr>
 						<tr>
-							<td class="valuation">Túlsúlyos</td>
-							<td class="value">25 - 29,9</td>
+							<td headers="valuationId" class="valuation">Túlsúlyos</td>
+							<td headers="valueId" class="value">25 - 29,9</td>
 						</tr>
 						<tr>
-							<td class="valuation">Elhízott</td>
-							<td class="value">30 - 34,9</td>
+							<td headers="valuationId" class="valuation">Elhízott</td>
+							<td headers="valueId" class="value">30 - 34,9</td>
 						</tr>
 						<tr>
-							<td class="valuation">Erősen elhízott</td>
-							<td class="value">> 35</td>
+							<td headers="valuationId" class="valuation">Erősen elhízott</td>
+							<td headers="valueId" class="value">> 35</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
+				<div id="streak"></div>
+				<div id="underWeight" class="size">
+					<label class="leftValuation">Sovány</label>
+					<label class="rightValue">< 18,5</label>
+				</div>
+				<div id="normal" class="size marginLeft">
+					<label class="leftValuation">Normális testsúly</label>
+					<label class="rightValue">18,5 - 24,9</label>
+				</div>
+				<div id="overweight" class="size marginLeft">
+					<label class="leftValuation">Túlsúlyos</label>
+					<label class="rightValue">25 - 29,9</label>
+				</div>
+				<div id="obese" class="size marginLeft">
+					<label class="leftValuation">Elhízott</label>
+					<label class="rightValue">30 - 34,9</label>
+				</div>
+				<div id="clinicallyObese" class="size marginLeft">
+					<label class="leftValuation">Erősen elhízott</label>
+					<label class="rightValue">> 35</label>
+				</div>
 		 </div>
 	</main>
 

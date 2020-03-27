@@ -18,6 +18,10 @@ input[type=number] {
     flex-grow: 0.5;
 }
 
+#right {
+	float: left;
+}
+
 .value {
 	text-align: right;
 }
@@ -32,4 +36,67 @@ table, th, td {
 
 th {
 	padding-left: 25px;
+}
+
+.size {
+	width: 200px;
+	height: 100px;
+}
+
+#underWeight {
+	z-index: 1;
+	background-color: #75dae5;
+}
+
+#normal {
+	z-index: 5;
+	background-color: #92bc1e;
+	margin-top: 20px;
+}
+
+#overweight {
+	z-index: 10;
+	background-color: #e0da09;
+	margin-top: 40px;
+}
+
+#obese {
+	z-index: 15;
+	background-color: #ec8e00;
+	margin-top: 60px;
+}
+
+#clinicallyObese {
+	z-index: 20;
+	background-color: #de0612;
+	margin-top: 80px;
+}
+
+#streak {
+	z-index: 9;
+	width: 125px;
+	height: 10px;
+	/* background-color: #f8b781; */
+	background-color: #cfaa1f;
+	margin-left: 100px;
+	margin-right: -103px;
+	margin-top: 131px;
+	transform: rotate(45deg);
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.marginLeft {
+	margin-left: -180px;
+}
+
+.leftValuation {
+	float: left;
+	display: block;
+	text-align: left;
+}
+
+.rightValue {
+	display: block;
+	text-align: right;
 }
