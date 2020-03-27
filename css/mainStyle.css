@@ -122,6 +122,11 @@ li a:hover:not(.active) {
 	width: 95px;
 }
 
+.required::after {
+        content: '*';
+        color: #f44336;
+}
+
 @media screen and (max-width: 550px) {
 	header {
 		background-repeat: no-repeat;

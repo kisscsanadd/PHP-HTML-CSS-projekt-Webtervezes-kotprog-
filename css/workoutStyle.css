@@ -5,10 +5,16 @@ form {
     background-color: #9fc3fa;
 }
 
+header {
+	background-image: none;
+	text-align: center;
+	background-color: black;
+}
+
 input[type=text],
 input[type=password],
 input[type=email],
-input[type=tel]{
+input[type=tel] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -16,13 +22,13 @@ input[type=tel]{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-input[type=radio],
-select{
 
+input[type=radio],
+select {
     margin: 12px 0;
 }
 
-#goal{
+#goal {
     width: 20%;
     box-sizing: border-box;
     border: 2px solid #ccc;
