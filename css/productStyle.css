@@ -11,7 +11,10 @@ th {
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
+	margin-right: 150px;
+	margin-left: 150px;
 	padding-bottom: 100px;
+	background-color: white;
 }
 
 .multi {
@@ -45,12 +48,6 @@ th {
 	margin-top: 25px;
 	visibility: hidden;
 	
-}
-
-.vitaminsContainer{
-	background-color: white;
-	margin-right: 150px;
-	margin-left: 150px;
 }
 
 label{

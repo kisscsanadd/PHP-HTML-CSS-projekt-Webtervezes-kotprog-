@@ -46,7 +46,7 @@ footer {
 	}
 }
 
-main{
+main {
 	margin-left: 30px;
 	margin-right: 30px;
 }
@@ -105,17 +105,17 @@ li a:hover:not(.active) {
 }
 
 .nav li ul {
-    position:absolute;
-    left:314px;
-    top:246px;
-    max-height:0;
-    -webkit-transform:perspective(350) rotate3d(1,0,0,-90deg);
-    -webkit-transform-origin:50% 0;
-    transition:350ms;
+    position: absolute;
+    left: 314px;
+    top: 246px;
+    max-height: 0;
+    -webkit-transform: perspective(350) rotate3d(1,0,0,-90deg);
+    -webkit-transform-origin: 50% 0;
+    transition: 350ms;
 }
 .nav ul > li:hover ul {
-    max-height:100px;
-    -webkit-transform:perspective(350) rotate3d(0,0,0,0);
+    max-height: 100px;
+    -webkit-transform: perspective(350) rotate3d(0,0,0,0);
 }
 
 .productsWidth {
@@ -133,7 +133,7 @@ li a:hover:not(.active) {
 		font-size: 11px;
 	}
 	.nav li ul {
-		left:246px;
-		top:240px;
+		left: 246px;
+		top: 240px;
 	}
 }
