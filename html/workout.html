@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Edzésterv</title>
     <link rel="stylesheet" type="text/css" href="../css/mainStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/workoutStyle.css" />
     <link rel="stylesheet" type="text/css" href="../css/printStyle.css" />
     <link href="../pictures/favicon.ico" rel="icon" type="image/x-icon" />
 </head>
@@ -36,6 +37,27 @@
     <label> Személyre szabott edzéstervvel segítünk a céljaid elérésében. Adj meg néhány alapvető adatot,</label>
     és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.
 
+    <form action="mailto:admin@admin.hu" method="post" enctype="text/plain">
+        <label class="required" for="username"><b>Név</b></label>
+        <input type="text" placeholder="Add meg a neved" id="username" required>
+
+        <label class="required" for="email"><b>Email-cím</b></label>
+        <input type="email" placeholder="Add meg az email címedet" id="email" required>
+
+        <label class="required" for="goal"><b>Mi a célod az edzéssel?</b></label> <br>
+        <select id="goal" name="goals" size="2">
+        <option value="tomegeles">Tömegnövelés</option>
+        <option value="fogyas">Fogyás</option>
+        </select><br>
+        <label class="required" for="goal"><b>Mennyi időd van hetente edzésre?</b></label><br>
+        <input type="radio" id="3h" name="time" value="3h">
+        <label for="3h">Nagyjából 3 óra</label>
+        <input type="radio" id="5h" name="time" value="5h">
+        <label for="5h">Nagyjából 5 óra</label>
+        <input type="radio" id="7h" name="time" value="7h">
+        <label for="7h">Nagyjából 7 óra</label><br>
+        <button type="submit">Küldés</button>
+    </form>
 </main>
 
 <footer>
