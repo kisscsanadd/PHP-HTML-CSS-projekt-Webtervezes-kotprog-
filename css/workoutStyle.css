@@ -11,6 +11,10 @@ header {
 	background-color: black;
 }
 
+video {
+	height: 200px;
+}
+
 input[type=text],
 input[type=password],
 input[type=email],

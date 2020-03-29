@@ -36,13 +36,13 @@ footer {
 	justify-content: center;
 }
 
-@-webkit-keyframes scroll {
+@keyframes run {
 	0% {
-		-webkit-transform: translate(0,0);
+		transform: translate(0,0);
 	}
 	
 	100% {
-		-webkit-transform: translate(-100%,0);
+		transform: translate(-100%,0);
 	}
 }
 
@@ -64,7 +64,7 @@ main {
 #running span {
 	display: inline-block;
 	padding-left: 100%;
-	-webkit-animation: scroll 25s infinite linear;
+	animation: run 25s infinite linear;
 }
 
 ul {
@@ -109,13 +109,10 @@ li a:hover:not(.active) {
     left: 314px;
     top: 246px;
     max-height: 0;
-    -webkit-transform: perspective(350) rotate3d(1,0,0,-90deg);
-    -webkit-transform-origin: 50% 0;
     transition: 350ms;
 }
 .nav ul > li:hover ul {
     max-height: 100px;
-    -webkit-transform: perspective(350) rotate3d(0,0,0,0);
 }
 
 .productsWidth {
