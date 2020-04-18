@@ -14,27 +14,27 @@
 	
     <nav class="nav">
         <ul>
-			<li><a href="main.html">Főoldal</a></li>
-			<li><a href="registration.html">Regisztráció</a></li>
+			<li><a href="main.php">Főoldal</a></li>
+			<li><a href="registration.php">Regisztráció</a></li>
 			<li class="current"><a href="#">Bejelentkezés</a></li>
-			<li class="about"><a href="about.html">Rólunk</a></li>
+			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
 				<a href="#">Termékek</a>
 				<ul class="productsWidth">
-					<li><a href="protein.html">Fehérjék</a></li>
-					<li><a href="vitamin.html">Vitaminok</a></li>
+					<li><a href="protein.php">Fehérjék</a></li>
+					<li><a href="vitamin.php">Vitaminok</a></li>
 				</ul>
 			</li>
-			<li class="about"><a href="contact.html">Kapcsolat</a></li>
-			<li><a href="bmi.html">BMI</a></li>
-			<li><a href="workout.html">Edzésterv</a></li>
+			<li class="about"><a href="contact.php">Kapcsolat</a></li>
+			<li><a href="bmi.php">BMI</a></li>
+			<li><a href="workout.php">Edzésterv</a></li>
 		</ul>
     </nav>
 	
 	<main>
 		<h2>Bejelentkezés</h2>
 
-		<form action="login.html" method="post">
+		<form action="login.php" method="post">
 			<div id="imgcontainer">
 				<img src="../pictures/loginAvatar.jpg" alt="Avatar" id="avatar">
 			</div>

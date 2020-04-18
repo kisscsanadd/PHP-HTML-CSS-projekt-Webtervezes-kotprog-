@@ -120,8 +120,8 @@
       <ul>
         <li><b>Felhasználó kezelés: regisztráció, belépés stb.</b></li>
         <li><span class="stfill">
-			<a href="./html/contact.html">Kapcsolattartás</a>, <a href="./html/bmi.html">BMI kalkulátor</a>, 
-			<a href="./html/workout.html">Edzésterv igénylése</a>, <a href="./html/login.html">Elfelejtett jelszó</a>
+			<a href="./php/contact.php">Kapcsolattartás</a>, <a href="./php/bmi.php">BMI kalkulátor</a>, 
+			<a href="./php/workout.php">Edzésterv igénylése</a>, <a href="./php/login.php">Elfelejtett jelszó</a>
 			</span></li>
       </ul>
     </div>
@@ -149,14 +149,14 @@
           </th>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">1</a></td>
+          <td><a href="./php/main.php">1</a></td>
           <td>
             Formai követelmények
           </td>
           <td>2</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">2</a></td>
+          <td><a href="./php/main.php">2</a></td>
           <td class="task">
             Szabványos HTML oldalak
             <span class="note">A minimálisan kötelező 5 oldalnak szabványosnak kell lennie.</span>
@@ -164,27 +164,27 @@
           <td>10</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">3</a></td>
+          <td><a href="./php/main.php">3</a></td>
           <td class="task" colspan="4">
             Menü megvalósítás
           </td>          
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">3.1</a></td>
+          <td><a href="./php/main.php">3.1</a></td>
           <td class="subtask">
             <a>Linkek használata</a>
           </td>
           <td>2</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">3.2</a></td>
+          <td><a href="./php/main.php">3.2</a></td>
           <td class="subtask">
             <a>Lista használata</a>
           </td>
           <td>2</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/main.html">3.3</a></td>
+          <td><a href="./php/main.php">3.3</a></td>
           <td class="subtask">
             <a>CSS formázás</a>
             <span class="note">- Az aktuális menüpont eltérő.</span>
@@ -199,7 +199,7 @@
           </td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/protein.html">4.1</a></td>
+          <td><a href="./php/protein.php">4.1</a></td>
           <td class="subtask">
             <a>Div illetve HTML5 elemekkel van kialakítva</a>
             <span class="note">Fejléc, lábléc, törzs, oldalsáv, menü.</span>
@@ -208,7 +208,7 @@
           <td>10</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/about.html">4.2</a></td>
+          <td><a href="./php/about.php">4.2</a></td>
           <td class="subtask">
             <a>Táblázat elemek szabályos használata</a>
             <span class="note">Fejlécekhez való társítással (headers).</span>
@@ -216,7 +216,7 @@
           <td>4</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/registration.html">4.3</a></td>
+          <td><a href="./php/registration.php">4.3</a></td>
           <td class="subtask">
             <a>Űrlap elemek használata</a>
             <span class="note">Legalább 4 féle beviteli mező.</span>
@@ -225,7 +225,7 @@
           <td>8</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/vitamin.html">4.4</a></td>
+          <td><a href="./php/vitamin.php">4.4</a></td>
           <td class="subtask">
             <a>Kép elem használata</a>
           </td>
@@ -238,14 +238,14 @@
           </td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/protein.html">5.1</a></td>
+          <td><a href="./php/protein.php">5.1</a></td>
           <td class="subtask">
             <a>Elemkijelölő, azonosítókijelölő, <br>osztálykijelölő, összetett kijelölők használata</a>
           </td>
           <td>8</td><td></td><td></td>
         </tr>
         <tr class="kotelezo">
-          <td><a href="./html/about.html">5.2</a></td>
+          <td><a href="./php/about.php">5.2</a></td>
           <td class="subtask">
             <a>Nyomtatási stíluslap</a>
             <span class="note">Az 5 db HTML oldal egyikéhez elég elkészíteni <br>a stíluslapot az órán tanultaknak megfelelően.</span>
@@ -258,11 +258,11 @@
             <i>A weboldal struktúra elemeinek testreszabása</i>
             <span class="note">Formázás, pozícionálás, méretezés, úsztatás</span>
             <span class="note">Példák:</span>
-            <span class="note">- <a href="./html/main.html">fix lábléc</a>: 4 pont</span>
+            <span class="note">- <a href="./php/main.php">fix lábléc</a>: 4 pont</span>
             <span class="note">- többoszlopos elrendezés: 4 pont</span>            			
-            <span class="note">- <a href="./html/bmi.html">lebegő doboz</a>: 4 pont</span>            			
-            <span class="note">- <a href="./html/bmi.html">z-index használata</a>: 4 pont</span>            			
-            <span class="note">- <a href="./html/about.html">méretezés</a>: 2 pont</span>            			
+            <span class="note">- <a href="./php/bmi.php">lebegő doboz</a>: 4 pont</span>            			
+            <span class="note">- <a href="./php/bmi.php">z-index használata</a>: 4 pont</span>            			
+            <span class="note">- <a href="./php/about.php">méretezés</a>: 2 pont</span>            			
             <span class="note">- stb.</span>            			
           </td>
           <td>10</td><td></td><td></td>
@@ -273,15 +273,15 @@
             <i>Dizájn</i>
             <span class="note">A korábbi részfeladatok teljesítéséhez használt <br>szabályokon felül.</span>
             <span class="note">Szabadon használható:</span>
-            <span class="note">- pozícionálás: <a href="./html/vitamin.html">absolute</a>, <a href="./html/main.html">fixed</a>, <a href="./html/protein.html">relative</a>,  <a href="./html/protein.html">static</a> típusonként 2 pont</span>
-            <span class="note">- <a href="./html/bmi.html">úsztatás</a>: 2 pont</span>
-            <span class="note">- <a href="./html/main.html">pseudo elemek</a>: 4 pont</span>
-            <span class="note">- <a href="./html/about.html">lekerekített sarkok</a>: 4 pont</span>
-            <span class="note">- <a href="./html/about.html">árnyékok</a>: 4 pont</span>
-            <span class="note">- <a href="./html/main.html">áttűnés</a>: 4 pont</span>
-            <span class="note">- transzformálás: <a href="./html/main.html">eltolás</a>, <a href="./html/bmi.html">forgatás</a>, skálázás, nyírás típusonként 2 pont</span>
-            <span class="note">- <a href="./html/main.html">animáció</a>: 4 pont</span>
-            <span class="note">- <a href="./html/about.html">media query</a></span>
+            <span class="note">- pozícionálás: <a href="./php/vitamin.php">absolute</a>, <a href="./php/main.php">fixed</a>, <a href="./php/protein.php">relative</a>,  <a href="./php/protein.php">static</a> típusonként 2 pont</span>
+            <span class="note">- <a href="./php/bmi.php">úsztatás</a>: 2 pont</span>
+            <span class="note">- <a href="./php/main.php">pseudo elemek</a>: 4 pont</span>
+            <span class="note">- <a href="./php/about.php">lekerekített sarkok</a>: 4 pont</span>
+            <span class="note">- <a href="./php/about.php">árnyékok</a>: 4 pont</span>
+            <span class="note">- <a href="./php/main.php">áttűnés</a>: 4 pont</span>
+            <span class="note">- transzformálás: <a href="./php/main.php">eltolás</a>, <a href="./php/bmi.php">forgatás</a>, skálázás, nyírás típusonként 2 pont</span>
+            <span class="note">- <a href="./php/main.php">animáció</a>: 4 pont</span>
+            <span class="note">- <a href="./php/about.php">media query</a></span>
             <span class="note">- stb.</span>
           </td>
           <td>24</td><td></td><td></td>
@@ -300,7 +300,7 @@
       <p class="stfill">
          "Rejtett" funkció: valamennyi képre ráhúzva az egeret, egy leírást látunk (az adott kép helyett), arról ami a képen látható. <br>
 		 Weboldal ikonja egy saját képre lett leváltva <br> 
-		 <a href="./html/workout.html">Videó</a> használata <br> <br>
+		 <a href="./php/workout.php">Videó</a> használata <br> <br>
 		 Lehetséges, hogy a linkelés során kimaradtak funkciók, amik léteznek és működnek.
       </p>
     </div>
