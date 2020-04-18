@@ -35,17 +35,17 @@
 		<h2>BMI kalkulátor</h2>
 		<div class="flexbox">
 			<div id="left">
-				<form action="bmi.html" method="post">
+				<form action="bmi.php" method="get">
 						<div>
 							<label for="height"><b>Magasság (cm)</b></label>
 						</div>
-						<input type="number" value="150" max="299" id="height" required>
+						<input type="number" value="150" max="299" id="height" name="height" required>
 						
 						<div class="gap">
 							<label for="weight"><b>Testsúly (kg)</b></label>
-							</div>
-						<input type="number" value="50" min="9" id="weight" required> <br>
-						<button type="submit" class="buttond">Kalkulálás</button>
+						</div>
+						<input type="number" value="50" min="9" id="weight" name="weight" required> <br>
+						<button type="submit" name="calculate" class="buttond">Kalkulálás</button>
 				</form>
 			</div>
 			<div id="right">
@@ -102,6 +102,22 @@
 					<label class="rightValue">> 35</label>
 				</div>
 		 </div>
+		 
+		 <?php
+		 
+			if(isset($_GET["calculate"])) {
+				$height = $_GET["height"];
+				$weight = $_GET["weight"];
+				
+				$m_height = $height / 100;
+				
+				$bmi = $weight / ($m_height * $m_height);
+				
+				echo "BMI-d: $bmi";
+				
+			}
+		 
+		 ?>
 	</main>
 
 	<footer>
