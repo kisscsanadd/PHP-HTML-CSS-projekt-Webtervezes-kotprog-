@@ -36,126 +36,123 @@
 	<main>
 		<h2>Regisztráció</h2>
 		
-		<section>
-			<form action="registration.php" method="post">
-				<div id="imgcontainer">
-					<img src="../pictures/avatar.png" alt="Avatar" id="avatar">
-					<img src="../pictures/regLogo.png" alt="REG" id="logo">
-				</div>
+		<form action="registration.php" method="post">
+			<div id="imgcontainer">
+				<img src="../pictures/avatar.png" alt="Avatar" id="avatar">
+				<img src="../pictures/regLogo.png" alt="REG" id="logo">
+			</div>
 
-				<div class="logRegFooterContainer">
-					<label class="required" for="username"><b>Felhasználónév</b></label>
-					<input type="text" placeholder="Add meg a felhasználóneved" value="<?php if(isset($_POST['username'])) echo $_POST['username']; ?>" id="username" name="username">
+			<div class="logRegFooterContainer">
+				<label class="required" for="username"><b>Felhasználónév</b></label>
+				<input type="text" placeholder="Add meg a felhasználóneved" value="<?php if(isset($_POST['username'])) echo $_POST['username']; ?>" id="username" name="username">
 
-					<label class="required" for="email"><b>Email-cím</b></label>
-					<input type="email" placeholder="Add meg az email címedet" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>" id="email" name="email">
+				<label class="required" for="email"><b>Email-cím</b></label>
+				<input type="email" placeholder="Add meg az email címedet" value="<?php if(isset($_POST['email'])) echo $_POST['email']; ?>" id="email" name="email">
 
-					<label class="required" for="emaila"><b>Email-cím megerősítés</b></label>
-					<input type="email" placeholder="Add meg még egyszer az email címedet" value="<?php 
-							if(isset($_POST['email']) && isset($_POST['email2']) && $_POST['email'] === $_POST['email2']) echo $_POST['email2']; 
-						?>" id="emaila" name="email2">
+				<label class="required" for="emaila"><b>Email-cím megerősítés</b></label>
+				<input type="email" placeholder="Add meg még egyszer az email címedet" value="<?php 
+						if(isset($_POST['email']) && isset($_POST['email2']) && $_POST['email'] === $_POST['email2']) echo $_POST['email2']; 
+					?>" id="emaila" name="email2">
 
-					<label class="required" for="pw"><b>Jelszó</b></label>
-					<input type="password" placeholder="Add meg a jelszavad" id="pw" name="password">
+				<label class="required" for="pw"><b>Jelszó</b></label>
+				<input type="password" placeholder="Add meg a jelszavad" id="pw" name="password">
 
-					<label class="required" for="pwa"><b>Jelszó megerősítés</b></label>
-					<input type="password" placeholder="Add meg még egyszer a jelszavad" id="pwa" name="password2">
+				<label class="required" for="pwa"><b>Jelszó megerősítés</b></label>
+				<input type="password" placeholder="Add meg még egyszer a jelszavad" id="pwa" name="password2">
 
-					<label for="phone"><b>Telefonszám</b></label>
-					<input type="tel" placeholder="Add meg a telefonszámod" 
-						value="<?php 
-							if(isset($_POST["signup"])) {
-								$phone = $_POST['phone'];
-								if(isset($phone) && strlen($phone) === 11 && !preg_match('/[A-Za-z]/', $phone)){
-									echo $_POST['phone']; 
-								}
+				<label for="phone"><b>Telefonszám</b></label>
+				<input type="tel" placeholder="Add meg a telefonszámod" 
+					value="<?php 
+						if(isset($_POST["signup"])) {
+							$phone = $_POST['phone'];
+							if(isset($phone) && strlen($phone) === 11 && !preg_match('/[A-Za-z]/', $phone)){
+								echo $_POST['phone']; 
 							}
-							
-						?>" id="phone" name="phone">
+						}
+						
+					?>" id="phone" name="phone">
 
-					<button type="submit" name="signup">Regisztráció</button>
-				</div>
-			</form>
-			
-			<div class="logRegFooterContainer" style="background-color:#b0dffa">
-				<button onclick="location.href = 'main.php';" type="button" id="cancelbtn" style="float: left; margin-right: 100px;">Vissza</button>
-			<?php
-				$accounts = loadUsers("database.txt");
-			
-				$username = "";
-				$email = "";
-				$email2 = "";
-				$pass = "";
-				$pass2 = "";
-				
-				$errors = [];
-				
-				if(isset($_POST["signup"])) {
-					$username = $_POST["username"];
-					$email = $_POST["email"];
-					$email2 = $_POST["email2"];
-					$pass = $_POST["password"];
-					$pass2 = $_POST["password2"];
-					$phone = $_POST["phone"];
-					
-					foreach($accounts as $account) {
-						if($account["username"] === $username) {
-							$errors[] = "A felhasználónév már foglalt!";
-						}
-					}
-					
-					if(empty($username) 
-						|| empty($email) 
-						|| empty($email2) 
-						|| empty($pass) 
-						|| empty($pass2)) {
-							$errors[] = "A csillaggal jelölt mezők kötelezők!";
-					}
-					
-					if (strlen($pass) < 5) {
-						$errors[] = "A jelszó túl rövid!";
-					}
-					
-					if($email !== $email2) {
-						$errors[] = "A két email címnek meg kell egyezzen!";
-					}
-					
-					if($pass !== $pass2) {
-						$errors[] = "A két jelszónak meg kell egyezzen!";
-					}
-					
-					if (!empty($phone)) {
-						if(strlen($phone) !== 11) {
-							$errors[] = "A telefonszám hossza nem megfelelő!";
-						}
-						
-						if(preg_match('/[A-Za-z]/', $phone)) {
-							$errors[] = "A telefonszám nem tartalmazhat betűt!";
-						}
-					}
-					
-					if(count($errors) === 0) {
-						echo "<span style='color: blue'>"."Sikeres regisztráció!"."</span>". "<br>";
-						
-						$data = [
-							"username" => $username,
-							"email" => $email,
-							"password" => $pass,
-							"phone" => $phone
-						];
-						
-						saveUser("database.txt", $data);
-					} else {
-						foreach($errors as $error) {
-							echo "<span style='color: red'>".$error."</span>". "<br>";
-						}
-					}	
-				}
-			?>
-
-			</div
+				<button type="submit" name="signup">Regisztráció</button>
+			</div>
+		</form>
 		
-		</section>
+		<div class="logRegFooterContainer" style="background-color:#b0dffa">
+			<button onclick="location.href = 'main.php';" type="button" id="cancelbtn" style="float: left; margin-right: 100px;">Vissza</button>
+		<?php
+			$accounts = loadUsers("database.txt");
+		
+			$username = "";
+			$email = "";
+			$email2 = "";
+			$pass = "";
+			$pass2 = "";
+			
+			$errors = [];
+			
+			if(isset($_POST["signup"])) {
+				$username = $_POST["username"];
+				$email = $_POST["email"];
+				$email2 = $_POST["email2"];
+				$pass = $_POST["password"];
+				$pass2 = $_POST["password2"];
+				$phone = $_POST["phone"];
+				
+				foreach($accounts as $account) {
+					if($account["username"] === $username) {
+						$errors[] = "A felhasználónév már foglalt!";
+					}
+				}
+				
+				if(empty($username) 
+					|| empty($email) 
+					|| empty($email2) 
+					|| empty($pass) 
+					|| empty($pass2)) {
+						$errors[] = "A csillaggal jelölt mezők kötelezők!";
+				}
+				
+				if (strlen($pass) < 5) {
+					$errors[] = "A jelszó túl rövid!";
+				}
+				
+				if($email !== $email2) {
+					$errors[] = "A két email címnek meg kell egyezzen!";
+				}
+				
+				if($pass !== $pass2) {
+					$errors[] = "A két jelszónak meg kell egyezzen!";
+				}
+				
+				if (!empty($phone)) {
+					if(strlen($phone) !== 11) {
+						$errors[] = "A telefonszám hossza nem megfelelő!";
+					}
+					
+					if(preg_match('/[A-Za-z]/', $phone)) {
+						$errors[] = "A telefonszám nem tartalmazhat betűt!";
+					}
+				}
+				
+				if(count($errors) === 0) {
+					echo "<span style='color: blue'>"."Sikeres regisztráció!"."</span>". "<br>";
+					
+					$data = [
+						"username" => $username,
+						"email" => $email,
+						"password" => $pass,
+						"phone" => $phone
+					];
+					
+					saveUser("database.txt", $data);
+				} else {
+					foreach($errors as $error) {
+						echo "<span style='color: red'>".$error."</span>". "<br>";
+					}
+				}	
+			}
+		?>
+
+		</div
 	</main>
 
 	<footer>

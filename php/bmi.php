@@ -115,27 +115,27 @@
 					</tbody>
 				</table>
 			</div>
-				<div id="streak"></div>
-				<div id="underWeight" class="size">
-					<label class="leftValuation">Sovány</label>
-					<label class="rightValue">&lt; 18,5</label>
-				</div>
-				<div id="normal" class="size marginLeft">
-					<label class="leftValuation">Normális</label>
-					<label class="rightValue">18,5 - 24,9</label>
-				</div>
-				<div id="overweight" class="size marginLeft">
-					<label class="leftValuation">Túlsúlyos</label>
-					<label class="rightValue">25 - 29,9</label>
-				</div>
-				<div id="obese" class="size marginLeft">
-					<label class="leftValuation">Elhízott</label>
-					<label class="rightValue">30 - 34,9</label>
-				</div>
-				<div id="clinicallyObese" class="size marginLeft">
-					<label class="leftValuation">Erősen elhízott</label>
-					<label class="rightValue">> 35</label>
-				</div>
+			<div id="streak"></div>
+			<div id="underWeight" class="size">
+				<label class="leftValuation">Sovány</label>
+				<label class="rightValue">&lt; 18,5</label>
+			</div>
+			<div id="normal" class="size marginLeft">
+				<label class="leftValuation">Normális</label>
+				<label class="rightValue">18,5 - 24,9</label>
+			</div>
+			<div id="overweight" class="size marginLeft">
+				<label class="leftValuation">Túlsúlyos</label>
+				<label class="rightValue">25 - 29,9</label>
+			</div>
+			<div id="obese" class="size marginLeft">
+				<label class="leftValuation">Elhízott</label>
+				<label class="rightValue">30 - 34,9</label>
+			</div>
+			<div id="clinicallyObese" class="size marginLeft">
+				<label class="leftValuation">Erősen elhízott</label>
+				<label class="rightValue">> 35</label>
+			</div>
 		 </div>
 		 
 		 <?php

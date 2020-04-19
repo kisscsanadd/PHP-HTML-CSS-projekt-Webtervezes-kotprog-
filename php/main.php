@@ -35,8 +35,14 @@
 
 		<h4>Üdvözlünk</h4>
 		<label> Ezen a honlapon kiváló minőségű fehérjéket és vitaminokat találsz.
-			Kitűnő sportolók számára, de a vitaminokat nem csak nekik, hanem midenkinek ajánljuk.</label>
-
+			Kitűnő sportolók számára, de a vitaminokat nem csak nekik, hanem midenkinek ajánljuk.
+		</label>
+		
+		<aside> 
+			<div style="float: right; width: 90px; text-align: center;">
+				Webtervezés 2020 <br> <br> Készítette: Kiss Csanád <br> & <br> Szirbik Péter
+			</div>
+		</aside>
 	</main>
 
 	<footer>
