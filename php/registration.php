@@ -80,7 +80,6 @@
 			<div class="logRegFooterContainer" style="background-color:#b0dffa">
 				<button onclick="location.href = 'main.php';" type="button" id="cancelbtn" style="float: left; margin-right: 100px;">Vissza</button>
 			<?php
-			
 				$accounts = loadUsers("database.txt");
 			
 				$username = "";
@@ -92,7 +91,6 @@
 				$errors = [];
 				
 				if(isset($_POST["signup"])) {
-					
 					$username = $_POST["username"];
 					$email = $_POST["email"];
 					$email2 = $_POST["email2"];

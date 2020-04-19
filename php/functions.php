@@ -21,5 +21,11 @@
 		
 		fclose($file);
 	}
+	
+	function deleteUsers($filename) {
+		$file = fopen($filename, "w");
+		fwrite($file, "");
+		fclose($file);
+	}
 
 ?>

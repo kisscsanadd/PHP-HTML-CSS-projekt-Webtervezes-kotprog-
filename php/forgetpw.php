@@ -1,8 +1,10 @@
+<?php include "functions.php"; ?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
-    <title>Bejelentkezés</title>
+    <title>Elfelejtett jelszó</title>
 	<link rel="stylesheet" type="text/css" href="../css/mainStyle.css" />
 	<link rel="stylesheet" type="text/css" href="../css/login-reg-style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/printStyle.css" />
@@ -16,7 +18,7 @@
         <ul>
 			<li><a href="main.php">Főoldal</a></li>
 			<li><a href="registration.php">Regisztráció</a></li>
-			<li class="current"><a href="#">Bejelentkezés</a></li>
+			<li><a href="login.php">Bejelentkezés</a></li>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
 				<a href="#">Termékek</a>
@@ -32,32 +34,65 @@
     </nav>
 	
 	<main>
-		<h2>Bejelentkezés</h2>
+		<h2>Elfelejtett jelszó</h2>
 
-		<form action="login.php" method="post">
+		<form action="forgetpw.php" method="post">
 			<div id="imgcontainer">
 				<img src="../pictures/loginAvatar.jpg" alt="Avatar" id="avatar">
 			</div>
 
 			<div class="logRegFooterContainer">
 				<label for="username"><b>Felhasználónév</b></label>
-				<input type="text" placeholder="Add meg a felhasználóneved" id="username" required>
+				<input type="text" placeholder="Add meg a felhasználóneved" id="username" name="username" required>
 
-				<label for="pw"><b>Jelszó</b></label>
-				<input type="password" placeholder="Add meg a jelszavad" id="pw" required>
+				<label for="pw"><b>Új jelszó</b></label>
+				<input type="password" placeholder="Add meg a jelszavad" id="pw" name="new_pw" required>
 
-				<button type="submit">Bejelentkezés</button>
-				<label>
-					<input type="checkbox" checked="checked" name="remember"> Jegyezz meg
-				</label>
-			</div>
-
-			<div class="logRegFooterContainer" style="background-color:#b0dffa">
-				<button onclick="location.href = 'main.php';" type="button" id="cancelbtn">Vissza</button>
-				<span><a id="forgetpw" href="forgetpw.php">Elfelejtetted a jelszavad?</a></span>
+				<button type="submit" name="confirm">Megerősít</button>
 			</div>
 		</form>
 	</main>
+	
+	<?php
+		$accounts = loadUsers("database.txt");
+		
+		$username = "";
+		$new_password = "";
+		
+		$errors = [];
+		$match = False;
+	
+		if (isset($_POST['confirm'])) {
+			$username = $_POST['username'];
+			$new_password = $_POST['new_pw'];
+			
+			if (strlen($new_password) < 5) {
+				$errors[] = "A jelszó túl rövid!";
+			}
+			
+			deleteUsers("database.txt");
+			
+			foreach($accounts as $account) {
+				if($account["username"] === $username) {
+					
+					$account["password"] = $new_password;
+					$match = True;
+					
+					echo "<span style='color: blue'>"."Sikeres jelszó frissítés!"."</span>". "<br>";
+				}
+				
+				saveUser("database.txt", $account);
+			}
+			
+			if($match === False) {
+				$errors[] = "Nincs ilyen felhasználónév";
+			}
+			
+			foreach($errors as $error) {
+				echo "<span style='color: red'>".$error."</span>". "<br>";
+			}
+		}
+	?>
 
 	<footer>
 		<label id="running"><span>Ez egy táplálékkiegészítőket áruló webshop. 
