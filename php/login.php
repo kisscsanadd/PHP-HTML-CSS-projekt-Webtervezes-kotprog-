@@ -53,7 +53,7 @@
 			</div>
 
 			<div class="logRegFooterContainer" style="background-color:#b0dffa">
-				<button onclick="location.href = 'main.html';" type="button" id="cancelbtn">Vissza</button>
+				<button onclick="location.href = 'main.php';" type="button" id="cancelbtn">Vissza</button>
 				<span><a id="forgetpw" href="#">Elfelejtetted a jelszavad?</a></span>
 			</div>
 		</form>

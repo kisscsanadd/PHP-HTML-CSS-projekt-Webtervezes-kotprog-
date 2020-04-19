@@ -39,12 +39,12 @@
 						<div>
 							<label for="height"><b>Magasság (cm)</b></label>
 						</div>
-						<input type="number" value="150" max="299" id="height" name="height" required>
+						<input type="number" value="<?php if(isset($_GET['height'])) echo $_GET['height']; else echo "150"; ?>" max="299" id="height" name="height" required>
 						
 						<div class="gap">
 							<label for="weight"><b>Testsúly (kg)</b></label>
 						</div>
-						<input type="number" value="50" min="9" id="weight" name="weight" required> <br>
+						<input type="number" value="<?php if(isset($_GET['weight'])) echo $_GET['weight']; else echo "50"; ?>" min="9" id="weight" name="weight" required> <br>
 						<button type="submit" name="calculate" class="buttond">Kalkulálás</button>
 				</form>
 			</div>
@@ -77,6 +77,41 @@
 							<td headers="valuationId" class="valuation">Erősen elhízott</td>
 							<td headers="valueId" class="value">> 35</td>
 						</tr>
+						<tr <?php 
+								if(isset($_GET["calculate"])) {
+									$height = $_GET["height"];
+									$weight = $_GET["weight"];
+									
+									$m_height = $height / 100;
+									
+									$bmi = $weight / ($m_height * $m_height);
+									$roundedBMI = (round($bmi, 1));
+									
+									echo "style=background-color:"; 
+										if($roundedBMI < 18.5) {
+											echo '#75dae5';
+										} else if ($roundedBMI > 18.5 && $roundedBMI < 25) {
+											echo '#92bc1e';
+										} else if ($roundedBMI >= 25 && $roundedBMI < 30) {
+											echo '#e0da09';
+										} else if ($roundedBMI >= 30 && $roundedBMI < 35) {
+											echo '#ec8e00';
+										} else if ($roundedBMI >= 35) {
+											echo '#de0612';
+										}
+								}
+							?>>
+							<td headers="valuationId" class="valuation">Te éréked</td>
+							<td headers="valueId" class="value">
+								<?php
+									if(isset($_GET["calculate"])) {
+										echo $roundedBMI;
+									} else {
+										echo '';
+									}
+								?>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
@@ -105,17 +140,7 @@
 		 
 		 <?php
 		 
-			if(isset($_GET["calculate"])) {
-				$height = $_GET["height"];
-				$weight = $_GET["weight"];
 				
-				$m_height = $height / 100;
-				
-				$bmi = $weight / ($m_height * $m_height);
-				
-				echo "BMI-d: $bmi";
-				
-			}
 		 
 		 ?>
 	</main>

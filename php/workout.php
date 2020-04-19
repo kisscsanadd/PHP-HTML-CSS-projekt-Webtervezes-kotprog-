@@ -66,6 +66,9 @@
         <input type="radio" id="7h" name="time">
         <label for="7h">Nagyjából 7 óra</label><br>
 		
+		<label for="img"><b>Előtte kép<b></label><br>
+		<input type="file" id="img" name="img" accept="image/*"><br>
+		
         <button type="submit">Küldés</button>
     </form>
 </main>
