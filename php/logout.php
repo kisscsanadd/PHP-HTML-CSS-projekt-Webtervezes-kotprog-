@@ -7,7 +7,7 @@
 		setcookie(session_name(), session_id(), time()-3600, '/');
 	}
 	
-	session_destroy()
+	session_destroy();
 	
 	header("Location: main.php");
 ?>

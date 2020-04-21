@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -15,8 +19,13 @@
     <nav class="nav">
         <ul>
 			<li><a href="main.php">Főoldal</a></li>
-			<li><a href="registration.php">Regisztráció</a></li>
-			<li><a href="login.php">Bejelentkezés</a></li>
+            <?php if(!isset($_SESSION["user"]) || empty($_SESSION["user"])):?>
+                <li><a href="registration.php">Regisztráció</a></li>
+                <li><a href="login.php">Bejelentkezés</a></li>
+            <?php else: ?>
+                <li><a href="workout.php">Edzésterv</a></li>
+                <li><a href="logout.php" >Kijelentkezés</a></li>
+            <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
 				<a href="#">Termékek</a>
@@ -27,7 +36,6 @@
 			</li>
 			<li class="current about"><a href="#">Kapcsolat</a></li>
 			<li><a href="bmi.php">BMI</a></li>
-			<li><a href="workout.php">Edzésterv</a></li>
 		</ul>
     </nav>
 

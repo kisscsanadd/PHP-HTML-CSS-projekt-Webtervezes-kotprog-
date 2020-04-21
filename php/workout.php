@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -18,9 +21,15 @@
 
 <nav class="nav">
     <ul>
+
         <li><a href="main.php">Főoldal</a></li>
-        <li><a href="registration.php">Regisztráció</a></li>
-        <li><a href="login.php">Bejelentkezés</a></li>
+        <?php if(!isset($_SESSION["user"]) || empty($_SESSION["user"])):?>
+            <li><a href="registration.php">Regisztráció</a></li>
+            <li><a href="login.php">Bejelentkezés</a></li>
+        <?php else: ?>
+            <li class="current"><a href="#">Edzésterv</a></li>
+            <li><a href="logout.php" >Kijelentkezés</a></li>
+        <?php endif; ?>
         <li class="about"><a href="about.php">Rólunk</a></li>
         <li class="productsWidth">
             <a href="#">Termékek</a>
@@ -31,7 +40,6 @@
         </li>
         <li class="about"><a href="contact.php">Kapcsolat</a></li>
         <li><a href="bmi.php">BMI</a></li>
-        <li class="current"><a href="#">Edzésterv</a></li>
     </ul>
 </nav>
 
@@ -42,15 +50,9 @@
     és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.
 
     <form action="mailto:admin@admin.hu" method="post" enctype="text/plain">
-        <label class="required" for="username"><b>Név</b></label>
-        <input type="text" placeholder="Add meg a neved" id="username" required>
-
-        <label class="required" for="email"><b>Email-cím</b></label>
-        <input type="email" placeholder="Add meg az email címedet" id="email" required>
-
         <label class="required" for="goal"><b>Mi a célod az edzéssel?</b></label> <br>
 
-        <select id="goal" name="goals" size="2">
+        <select id="goal" name="goal" size="2">
 			<option value="tomegeles">Tömegnövelés</option>
 			<option value="fogyas">Fogyás</option>
         </select><br>
@@ -66,11 +68,14 @@
         <input type="radio" id="7h" name="time">
         <label for="7h">Nagyjából 7 óra</label><br>
 		
-		<label for="img"><b>Előtte kép<b></label><br>
-		<input type="file" id="img" name="img" accept="image/*"><br>
-		
-        <button type="submit">Küldés</button>
+        <button type="submit" name="submit">Küldés</button>
     </form>
+
+    <?php
+
+    $name = $_SESSION["user"]["username"];
+    $email = $_SESSION["user"]["email"];
+    ?>
 </main>
 
 <footer>

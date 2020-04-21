@@ -1,4 +1,11 @@
-<?php include "functions.php"; ?>
+<?php
+session_start();
+include "functions.php";
+if(isset($_SESSION["user"]) || !empty($_SESSION["user"])){
+    header("Location: main.php");
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html  lang="hu">
@@ -17,8 +24,13 @@
     <nav class="nav">
         <ul>
 			<li><a href="main.php">Főoldal</a></li>
-			<li class="current"><a href="#">Regisztráció</a></li>
-			<li><a href="login.php">Bejelentkezés</a></li>
+            <?php if(!isset($_SESSION["user"]) || empty($_SESSION["user"])):?>
+                <li class="current"><a href="#">Regisztráció</a></li>
+                <li><a href="login.php">Bejelentkezés</a></li>
+            <?php else: ?>
+                <li><a href="workout.php">Edzésterv</a></li>
+                <li><a href="logout.php" >Kijelentkezés</a></li>
+            <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
 				<a href="#">Termékek</a>
@@ -29,7 +41,6 @@
 			</li>
 			<li class="about"><a href="contact.php">Kapcsolat</a></li>
 			<li><a href="bmi.php">BMI</a></li>
-			<li><a href="workout.php">Edzésterv</a></li>
 		</ul>
     </nav>
 	
