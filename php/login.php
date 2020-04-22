@@ -104,7 +104,7 @@ include "functions.php"; ?>
                 $_SESSION["user"] = $user_data;
                 header("Location: main.php");
             }else{
-                echo "sikertelen belepes";
+                echo "Sikertelen belépés, próbáld újra!";
             }
             // Csak akkor lehessen belépni, ha a felhasználónév-jelszó páros helyes!
 
