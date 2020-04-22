@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION["user"]) || !empty($_SESSION["user"])){
-    header("Location: workout.php");
+    header("Location: main.php");
     exit();
 }
 
