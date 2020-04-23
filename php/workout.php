@@ -50,8 +50,8 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
 <main>
     <h2>Edzésterv</h2>
 
-    <label> Személyre szabott edzéstervvel segítünk a céljaid elérésében. Adj meg néhány alapvető adatot,</label>
-    és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.
+    <label> Személyre szabott edzéstervvel segítünk a céljaid elérésében. Adj meg néhány alapvető adatot,
+    és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.<br><br></label>
     <?php
     if (isset($_POST["submit"])) {
         $username = $_SESSION["user"]["username"];
@@ -94,7 +94,7 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-    // Check if image file is a actual image or fake image
+		
         if(isset($_POST["submit"])) {
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if($check !== false) {
@@ -104,26 +104,26 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
                 $uploadOk = 0;
             }
         }
-    // Check if file already exists
+		
         if (file_exists($target_file)) {
             echo "A képet már feltötötték.";
             $uploadOk = 0;
         }
-// Check file size
+		
         if ($_FILES["fileToUpload"]["size"] > 500000) {
             echo "Túl nagy a kép mérete.";
             $uploadOk = 0;
         }
-// Allow certain file formats
+		
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
             && $imageFileType != "gif" ) {
             echo "Csak JPG, JPEG, PNG & GIF fájlok engedélyezettek.";
             $uploadOk = 0;
         }
-// Check if $uploadOk is set to 0 by an error
+		
         if ($uploadOk == 0) {
             echo "Sajnáljuk, a feltöltés nem sikerült.";
-// if everything is ok, try to upload file
+			
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "A ". basename( $_FILES["fileToUpload"]["name"]). " képet sikeresen feltöltötted.";
