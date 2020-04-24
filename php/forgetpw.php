@@ -25,6 +25,7 @@ include "functions.php"; ?>
             <?php else: ?>
                 <li><a href="workout.php">Edzésterv</a></li>
                 <li><a href="logout.php" >Kijelentkezés</a></li>
+				<li class="about"><a href="profile.php" >Profil</a></li>
             <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
@@ -94,8 +95,11 @@ include "functions.php"; ?>
 				$errors[] = "Nincs ilyen felhasználónév";
 			}
 			
-			foreach($errors as $error) {
-				echo "<span style='color: red'>".$error."</span>". "<br>";
+			$i = 0;
+			
+			while($i < count($errors)) {
+				echo "<span style='color: red'>".$errors[$i]."</span>". "<br>";
+				$i++;
 			}
 		}
 	?>

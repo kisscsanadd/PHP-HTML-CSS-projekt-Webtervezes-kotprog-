@@ -25,7 +25,6 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
 
 <nav class="nav">
     <ul>
-
         <li><a href="main.php">Főoldal</a></li>
         <?php if(!isset($_SESSION["user"]) || empty($_SESSION["user"])):?>
             <li><a href="registration.php">Regisztráció</a></li>
@@ -33,6 +32,7 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
         <?php else: ?>
             <li class="current"><a href="#">Edzésterv</a></li>
             <li><a href="logout.php" >Kijelentkezés</a></li>
+			<li class="about"><a href="profile.php" >Profil</a></li>
         <?php endif; ?>
         <li class="about"><a href="about.php">Rólunk</a></li>
         <li class="productsWidth">
@@ -135,7 +135,7 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
         }
 
 
-    }else
+    } else
     { ?>
         <form action="workout.php" method="post" enctype="multipart/form-data">
             <label class="required" for="goal"><b>Mi a célod az edzéssel?</b></label> <br>

@@ -24,6 +24,7 @@ session_start();
             <?php else: ?>
                 <li><a href="workout.php">Edzésterv</a></li>
                 <li><a href="logout.php" >Kijelentkezés</a></li>
+				<li class="about"><a href="profile.php" >Profil</a></li>
             <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">

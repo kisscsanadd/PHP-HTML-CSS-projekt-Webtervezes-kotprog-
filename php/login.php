@@ -31,6 +31,7 @@ include "functions.php"; ?>
             <?php else: ?>
                 <li><a href="workout.php">Edzésterv</a></li>
                 <li><a href="logout.php" >Kijelentkezés</a></li>
+				<li class="about"><a href="profile.php" >Profil</a></li>
             <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
@@ -93,6 +94,7 @@ include "functions.php"; ?>
                     $user_data["username"] = $account["username"];
                     $user_data["email"] = $account["email"];
                     $user_data["phone"] = $account["phone"];
+                    $user_data["date"] = $account["date"];
                     $_SESSION["user"] = $user_data;
 
                     $success_login = true;
@@ -102,7 +104,7 @@ include "functions.php"; ?>
             }
             if($success_login){
                 $_SESSION["user"] = $user_data;
-                header("Location: main.php");
+                header("Location: profile.php");
             }else{
                 echo "Sikertelen belépés, próbáld újra!";
             }

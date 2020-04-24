@@ -1,1 +1,1 @@
-
+a:5:{s:8:"username";s:3:"asd";s:5:"email";s:10:"asd@asd.gz";s:8:"password";s:6:"asdqwe";s:5:"phone";s:0:"";s:4:"date";s:10:"2020-04-24";}

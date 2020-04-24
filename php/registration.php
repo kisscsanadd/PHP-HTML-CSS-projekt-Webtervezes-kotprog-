@@ -30,6 +30,7 @@ if(isset($_SESSION["user"]) || !empty($_SESSION["user"])){
             <?php else: ?>
                 <li><a href="workout.php">Edzésterv</a></li>
                 <li><a href="logout.php" >Kijelentkezés</a></li>
+				<li class="about"><a href="profile.php" >Profil</a></li>
             <?php endif; ?>
 			<li class="about"><a href="about.php">Rólunk</a></li>
 			<li class="productsWidth">
@@ -151,10 +152,13 @@ if(isset($_SESSION["user"]) || !empty($_SESSION["user"])){
 						"username" => $username,
 						"email" => $email,
 						"password" => $pass,
-						"phone" => $phone
+						"phone" => $phone,
+						"date" => date("Y-m-d")
 					];
 					
 					saveUser("database.txt", $data);
+					
+					header("Location: login.php");
 				} else {
 					foreach($errors as $error) {
 						echo "<span style='color: red'>".$error."</span>". "<br>";
@@ -163,7 +167,7 @@ if(isset($_SESSION["user"]) || !empty($_SESSION["user"])){
 			}
 		?>
 
-		</div
+		</div>
 	</main>
 
 	<footer>
