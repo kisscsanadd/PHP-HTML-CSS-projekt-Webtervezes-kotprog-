@@ -49,14 +49,17 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
 
 <main>
     <h2>Edzésterv</h2>
-
-    <label> Személyre szabott edzéstervvel segítünk a céljaid elérésében. Adj meg néhány alapvető adatot,
-    és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.<br><br></label>
+	
+    <label> 
+		Személyre szabott edzéstervvel segítünk a céljaid elérésében. Adj meg néhány alapvető adatot,
+		és hamarosan küldjük e-mailben a csapatunk által összeállított edzéstervet, és táplálkozási tanácsokat.	
+	</label> <br> <br>
+	
     <?php
     if (isset($_POST["submit"])) {
         $username = $_SESSION["user"]["username"];
         $goal = $_POST["goal"];
-        $time = $_POST["time"];
+        $time = $_POST["time"];		
         echo "Kedves " .$username . ", a következő heti edzéstervet álltottuk össze neked:";
         echo "<br>";
         if($goal === "loss"){
@@ -154,8 +157,8 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
             <input type="radio" id="5h" name="time" value="5">
             <label for="5h">Max 5 nap</label><br>
 
-            <label for="img"><b>Előtte kép<b></label><br>
-            <input type="file" name="fileToUpload" id="fileToUpload">
+            <label for="img"><b>Előtte kép</b></label><br>
+            <input type="file" name="fileToUpload" id="img">
 
             <button type="submit" name="submit">Küldés</button>
         </form>

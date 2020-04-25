@@ -45,7 +45,7 @@ if(!(isset($_SESSION["user"])) || empty($_SESSION["user"])) {
             <li><a href="registration.php">Regisztráció</a></li>
             <li><a href="login.php">Bejelentkezés</a></li>
         <?php else: ?>
-            <li><a href="#">Edzésterv</a></li>
+            <li><a href="workout.php">Edzésterv</a></li>
             <li><a href="logout.php" >Kijelentkezés</a></li>
             <li class="current about"><a href="#" >Profil</a></li>
         <?php endif; ?>
