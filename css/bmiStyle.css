@@ -11,15 +11,11 @@ input[type=number] {
 }
 
 .flexbox {
-    display: flex;
+  display: flex;
 }
 
 #left {
     flex-grow: 0.7;
-}
-
-#right {
-	float: left;
 }
 
 .value {

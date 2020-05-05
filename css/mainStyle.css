@@ -1,6 +1,6 @@
 body {
 	margin: auto;
-    background-color: #cae3db;
+  background-color: #cae3db;
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +25,6 @@ header {
 footer {
 	height: 20px;
 	position: fixed;
-	left: 0;
 	bottom: 0;
 	width: 100%;
 	background-color: #333;
@@ -33,7 +32,6 @@ footer {
 	color: white;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 @keyframes run {
@@ -59,10 +57,8 @@ h2::first-letter {
 	background-color: #333;
 	opacity: 60%;
 	color: white;
-	display: block;
 	width: 100%;
 	white-space: nowrap;
-	overflow: hidden;
 }
 
 #running span {
@@ -95,10 +91,9 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+li a:hover {
   background-color: #111;
 }
-
 
 .current {
   background-color: #65aaaa;
@@ -109,23 +104,20 @@ li a:hover:not(.active) {
 }
 
 .nav li ul {
-    position: absolute;
-    left: 314px;
-    top: 246px;
-    max-height: 0;
-    transition: 350ms;
-}
-.nav ul > li:hover ul {
-    max-height: 100px;
-}
-
-.productsWidth {
+  position: absolute;
+  left: 314px;
+  top: 246px;
+  max-height: 0;
 	width: 95px;
+}
+.nav li:hover ul {
+  max-height: 100px;
+  transition: 350ms;
 }
 
 .required::after {
-        content: '*';
-        color: #f44336;
+  content: '*';
+  color: #f44336;
 }
 
 @media screen and (max-width: 550px) {
