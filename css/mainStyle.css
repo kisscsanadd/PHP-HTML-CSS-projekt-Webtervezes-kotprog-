@@ -1,0 +1,145 @@
+body {
+	margin: auto;
+    background-color: #cae3db;
+}
+
+body::-webkit-scrollbar {
+	width: 0.25rem;
+	height: 0.25rem;
+}
+
+
+body::-webkit-scrollbar-thumb {
+	background: #3c7e80;
+}
+
+header {
+	height: 200px;
+	background-color: #333;
+	background-image: url('../pictures/header.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: repeat;
+}
+
+footer {
+	height: 20px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #333;
+	opacity: 60%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes run {
+	0% {
+		transform: translate(0,0);
+	}
+	
+	100% {
+		transform: translate(-100%,0);
+	}
+}
+
+main {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+h2::first-letter {
+  font-size:150%;
+} 
+
+#running {
+	background-color: #333;
+	opacity: 60%;
+	color: white;
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#running span {
+	display: inline-block;
+	padding-left: 100%;
+	animation: run 25s infinite linear;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+.about {
+	float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.current {
+  background-color: #65aaaa;
+}
+
+.nav li li {
+	float: none;
+}
+
+.nav li ul {
+    position: absolute;
+    left: 314px;
+    top: 246px;
+    max-height: 0;
+    transition: 350ms;
+}
+.nav ul > li:hover ul {
+    max-height: 100px;
+}
+
+.productsWidth {
+	width: 95px;
+}
+
+.required::after {
+        content: '*';
+        color: #f44336;
+}
+
+@media screen and (max-width: 550px) {
+	header {
+		background-repeat: no-repeat;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		font-size: 11px;
+	}
+	.nav li ul {
+		left: 246px;
+		top: 240px;
+	}
+}

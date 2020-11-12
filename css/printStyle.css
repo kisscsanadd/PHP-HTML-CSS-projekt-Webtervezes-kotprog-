@@ -1,0 +1,26 @@
+@media print {
+	header {
+		display: none;
+	}
+	
+	footer, #running {
+		display: none;
+	}
+	
+	#forgetpw {
+		text-decoration: none;
+	}
+	
+	.tableMargin {
+		margin-bottom: 20px;
+	}
+	
+	.multi {
+		height: 100px;
+		width: 100px;
+	}
+	
+	img {
+		display: none;
+	}
+}

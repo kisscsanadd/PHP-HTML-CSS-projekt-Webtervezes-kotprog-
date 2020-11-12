@@ -1,0 +1,61 @@
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.tableMargin {
+	margin-bottom: 50px;
+}
+
+#aboutUs tr:nth-child(even) {
+  background-color: #eee;
+}
+#aboutUs tr:nth-child(odd) {
+ background-color: #fff;
+}
+#aboutUs th {
+  background-color: black;
+  color: white;
+}
+
+.citationImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -100px;
+	width: 50%;
+	border-radius: 9px;
+	box-shadow: 4px 10px 18px 0 black;
+}
+
+.desciption {
+	height: 56px;
+	margin-top: 40px;
+	text-align: center;
+	visibility: hidden;
+}
+
+td:hover .desciption {
+	visibility: visible;
+}
+
+td:hover .citationImg{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 780px) {
+	td:hover .desciption {
+		visibility: hidden;
+	}
+	
+	td:hover .citationImg{
+		visibility: visible;
+	}
+}
